@@ -1,0 +1,130 @@
+/* General styles for the share bar */
+.ssb-share-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Button styles */
+.ssb-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    background-color: #555; /* Default background color */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.ssb-button:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.ssb-button i {
+    display: block;
+}
+
+/* Button sizes */
+.ssb-size-small .ssb-button {
+    width: 30px;
+    height: 30px;
+}
+
+.ssb-size-small .ssb-button i {
+    font-size: 14px;
+}
+
+.ssb-size-medium .ssb-button {
+    width: 40px;
+    height: 40px;
+}
+
+.ssb-size-medium .ssb-button i {
+    font-size: 20px;
+}
+
+.ssb-size-large .ssb-button {
+    width: 50px;
+    height: 50px;
+}
+
+.ssb-size-large .ssb-button i {
+    font-size: 26px;
+}
+
+/* Specific network colors */
+.ssb-facebook {
+    background-color: #3b5998;
+}
+
+.ssb-twitter {
+    background-color: #55acee;
+}
+
+.ssb-google-plus {
+    background-color: #dd4b39;
+}
+
+.ssb-pinterest {
+    background-color: #bd081c;
+}
+
+.ssb-linkedin {
+    background-color: #0077b5;
+}
+
+.ssb-whatsapp {
+    background-color: #25d366;
+}
+
+/* Floating left */
+.ssb-floating-left {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.ssb-floating-left .ssb-share-bar {
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+/* Inside image */
+.ssb-inside-image {
+    position: absolute;
+    top: 470px;
+    right: 44%;
+    display: flex;
+    gap: 10px;
+}
+
+/* Screen reader text */
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Hide WhatsApp button by default */
+.ssb-whatsapp-mobile {
+    display: none;
+}
+
+/* Show WhatsApp button on mobile devices */
+@media (max-width: 767px) {
+    .ssb-whatsapp-mobile {
+        display: inline-flex;
+    }
+}
